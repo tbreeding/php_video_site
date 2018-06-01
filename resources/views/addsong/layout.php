@@ -48,7 +48,10 @@ if(isset($_POST) && $_POST != null) {
             <textarea name="song_embed_code" value="<?= $song->song_embed_code ?>"></textarea>
         </div>
         <div class="buttons">
-        <input type='submit' value="Save / Update" /><button class='delete'>Delete Song</button>
+        <input type='submit' value="Save / Update" />  
+            <?php if($song->song_id) :  ?>
+                <a href="<?= $site_url . '?page=deletesong&delete_id=' . $song->song_id; ?>" class='delete'>Delete Song</a>
+            <?php endif ?>
         </div>
     </form>
 

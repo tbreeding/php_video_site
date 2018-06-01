@@ -97,4 +97,13 @@ class Song {
         }
     }
 
+    public static function delete($id) {
+        $query = "
+        DELETE FROM `songs`
+        WHERE `song_id` = ?
+        ";
+
+        db::query($query, [$id]);
+    }
+
 }
