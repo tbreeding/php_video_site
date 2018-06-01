@@ -63,7 +63,7 @@ class Song {
 
         $this->song_id = db::getConnection()->lastInsertId();
     }
-}
+
     public function update() {
         $query = "
             UPDATE `songs`

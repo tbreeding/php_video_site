@@ -6,7 +6,7 @@ require_once '../config/app.php';
 require_once '../vendor/tbreeding/mvc/routing.php';
 require_once '../vendor/tbreeding/mvc/db.php';
 require_once '../app/Song.php';
-require_once '../app/List.php';
+require_once '../app/Songlist.php';
 
 //BOOTSTRAPPING
 //include / require all the necessary files
