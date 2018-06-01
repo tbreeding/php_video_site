@@ -11,7 +11,7 @@ class ListController {
         $site_url = SITE_URL;
         
         $song_list = Songlist::getList();
-        var_dump($song_list);
+        // var_dump($song_list);
 
         $content = 'list/layout.php';
         include '../resources/views/html-wrapper.php';

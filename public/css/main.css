@@ -141,43 +141,38 @@ footer {
     position: fixed;
     bottom: 0;
 }
-#list {
+
+ul {
     display: flex;
     flex-direction: column;
-    align-items: center;    
-}
-.table {
+    align-items: center;
+    width: 40%;
+    list-style: none;
     border: 5px solid slategray;
-    margin-bottom: 100px;
-    border-radius: 20px;
-    overflow: hidden;
+    border-radius: 10px;
 }
-.table p, .table h3 {
-    margin: 0;
-    padding: 2px;
-    
-}
-table:last-child {
-    border-bottom: none;
-}
-
-.row {
+.listLine {
     display: flex;
-    border-bottom: 1px solid slategray;
     align-items: center;
     width: 100%;
+    padding:  0 20px;
+    border-bottom: 1px solid slategray;
 }
-.row:last-child {
-    border-right: none;
+.listLine a{
 }
-
-.listItem {
-    width: 200px;
-    text-align: center;
-    /* border-left: 1px solid black; */
-    border-right: 1px solid black;
+.listLine p {
+    padding: 0 10px;
 }
-
+.listId {
+    flex-basis: 10%; 
+    border-right: 1px solid slategray;
+}
+.listTitle, .listAuthor {
+    flex-basis: 45%;
+}
+.listTitle {
+    border-right: 1px solid slategray;
+}
 .details {
     width: 300px;
     display: flex;
