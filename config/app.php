@@ -1,6 +1,6 @@
 <?php
 
-define('SITE_URL', 'http://playlist:81');
+define('SITE_URL', 'http://playlist');
 
 
 //database connection information

@@ -5,7 +5,8 @@ use \app\Song;
 $song = Song::find($_GET['song_id']);
 ?>
 
-<div class="container">
+<div class="container" id="play">
+    <div class="songWindow">
             <?php echo $song->song_embed_code; ?>
             <div class="itemDetail">
                 <p class='listTitle'>Title: <?php echo $song->song_title; ?></p>
@@ -13,6 +14,7 @@ $song = Song::find($_GET['song_id']);
                 <p class='listDescription'>Description: <?php echo $song->song_description; ?></p>
                 <p class='listDescription'>Date added: <?php echo $song->song_date_added; ?></p>
             </div>
+    </div>
     <?php if ($song->song_id > 1) : ?>
     <a href="<?= $site_url . '?page=playsong&song_id=' . ($song->song_id - 1); ?>">Previous song</a>
     <?php endif; ?>

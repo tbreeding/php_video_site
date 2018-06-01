@@ -1,6 +1,6 @@
 <header>
     <nav>
-        <h1><a href="http://playlist:81">Playlist</a></h1>
-        <a href="http://playlist:81/?page=addsong">Add New</a>
+        <h1><a href="<?= $site_url ?>">Playlist</a></h1>
+        <a class="addItemNavButton" href="<?= $site_url ?>?page=addsong">Add New</a>
     </nav>
 </header>

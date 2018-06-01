@@ -1,3 +1,15 @@
+/*
+#B74828 - Sienna
+#302114 - Dark Olive Green
+#C4A67C - Light Khaki
+#967451 - Dark Khaki
+#6F4F33 - Olive Brown
+
+
+
+*/
+
+
 * {
     box-sizing: border-box;
 }
@@ -10,7 +22,7 @@ a {
 
 h1 {
     font-size: 3rem;
-    text-shadow: 1px 1px white, 2px 2px 5px black;
+    /* text-shadow: 1px 1px white, 2px 2px 5px black; */
 }
 
 body {
@@ -18,70 +30,71 @@ body {
     margin: 0;
     font-family: sans-serif;
     color: slategray;
+    background-image: url('../img/bar.jpg');
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: -150px;
+    background-repeat: no-repeat;
 }
 
 nav {
-    background-color: blanchedalmond;
+    background-color:rgba(48, 33, 20, 0.803);
     width: 100%;
-    height: 120px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    color: blanchedalmond;
 }
 
-.navItems {
-    flex-basis: 30%;
-    display: flex;
-    justify-content: space-around;
-}
-
-nav a {
+.addItemNavButton {
     font-size: 1.5rem;
     padding: 10px 30px;
-    border: 5px solid slategray;
+    border: 5px solid #967451;
     border-radius: 10px;
     opacity: .8;
     transition: opacity .2s;
 }
 
-nav a:hover {
+.navItems a:hover {
     opacity: 1;
     box-shadow: 2px 2px 5px 0 gray;
 }
 
 .container {
-    /* min-height: 90vh; */
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
+    justify-content: center;
 }
-
 .container h2 {
-    align-self: flex-start;
-    margin-left: 20px;
+    color: blanchedalmond;
 }
-
-.inner {
-    width: 80%;
-    background-color: #eee;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    min-height: 80vh;
+.songList {
+    background-color: rgba(46, 32, 19, 0.561);
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.3rem;
+    width: 70%;
+}
+.songList p {
+    margin: 3px;
 }
 
 form {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    background-color: white;
+    background-color: rgba(48, 33, 20, 0.521);
     width: 650px;
     align-self: center;
     border-radius: 20px;
     box-shadow: 3px 3px 10px 0 black;
+    color: blanchedalmond;
 }
 
 form h3 {
@@ -98,7 +111,7 @@ form h3 {
 form input[type='text'] {
     height: 40px;
     width: 300px;
-    border: 3px solid slategray;
+    border: 3px solid #967451;
     border-radius: 10px;
     outline: none;
     padding: 0 5px;
@@ -130,21 +143,39 @@ input[type=number]::-webkit-outer-spin-button {
 .radios p {
     margin: 0 10px;
 }
-
-input[type='submit'] {
-    border: 5px solid slategray;
-    font-size: 2rem;
-    background-color: blanchedalmond;
-    border-radius: 10px;
-    color: slategray;
-    padding: 10px 30px;
-    align-self: flex-end;
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
 }
 
+input[type='submit'], .delete {
+
+    cursor: pointer;    
+    align-self: flex-end;
+    color: #302114;
+    font-size: 1.2rem;
+    padding: 5px 20px;
+    border: 2px solid #967451;
+    border-radius: 10px;
+    transition: opacity .2s;
+    background-color: blanchedalmond;
+}
+textarea {
+    height: 80px;
+    width: 300px;
+    border: 3px solid #967451;
+    border-radius: 10px;
+    outline: none;
+    padding: 0 5px;
+    font-size: 1rem;
+}
 footer {
     width: 100%;
     height: 50px;
-    background-color: slategray;
+    background-color: #302114;
     color: blanchedalmond;
     padding: 10px;
     display: flex;
@@ -160,7 +191,7 @@ ul {
     align-items: center;
     width: 40%;
     list-style: none;
-    border: 5px solid slategray;
+    border: 5px solid #967451;
     border-radius: 10px;
 }
 
@@ -169,10 +200,17 @@ ul {
     align-items: center;
     width: 100%;
     padding: 0 20px;
-    border-bottom: 1px solid slategray;
+    border-bottom: 1px solid #967451;
+    color: blanchedalmond;
 }
 
 .listLine a {
+    margin: 5px 10px;
+    padding: 5px 10px;
+    text-align: center;
+    border: 2px solid #B74828;
+    border-radius: 5px;
+    background-color: rgba(46, 32, 19, 0.904)
 }
 
 .listLine p {
@@ -181,40 +219,28 @@ ul {
 
 .listId {
     flex-basis: 10%;
-    border-right: 1px solid slategray;
+
 }
 
 .listTitle, .listAuthor {
     flex-basis: 45%;
 }
-
-.listTitle {
-    border-right: 1px solid slategray;
+.listHeader {
+    font-size: 2rem !important;
 }
-
-.details {
-    width: 300px;
+#play {
+    color: blanchedalmond;
+}
+.songWindow {
+    background-color: rgba(48, 33, 20, 0.521);
     display: flex;
-    flex-direction: column;
-    box-shadow: 4px 4px 10px 0 gray;
-    border-radius: 20px;
+    color: blanchedalmond;
     padding: 10px;
-    background-color: white;
-    align-self: center;
-    margin-bottom: 100px;
+    border-radius: 10px; 
+    font-size: 1.3rem;   
 }
-
-.details p, .details h4 {
-    margin: 15px 0px;
-}
-
-.details .row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.itemDetail {
-    display: flex;
-    flex-direction: column;
-
+iframe {
+   border: 5px solid blanchedalmond;
+   margin-right: 20px; 
+   border-radius: 5px;
 }

@@ -23,7 +23,6 @@ if(isset($_POST) && $_POST != null) {
     header("Location: /?page=addsong&song_id={$song->song_id}");
 } 
 ?>
-
 <div class="container">
     <h2>Add/Update Song</h2>
     <form action="" method="POST">
@@ -45,7 +44,7 @@ if(isset($_POST) && $_POST != null) {
         </div>
         <div class="formLine">
             <h4 class="label">Embed Code:</h4>
-            <textarea name="song_embed_code" value="<?= $song->song_embed_code ?>"></textarea>
+            <textarea id="embedCode" name="song_embed_code" ></textarea>
         </div>
         <div class="buttons">
         <input type='submit' value="Save / Update" />  
@@ -55,7 +54,9 @@ if(isset($_POST) && $_POST != null) {
         </div>
     </form>
 
-
+    <script>
+        document.getElementById("embedCode").value = '<?=  $song->song_embed_code ?>';   
+    </script>    
 
 
 

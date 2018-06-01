@@ -1,5 +1,5 @@
 <footer>
 
-<h1>Footer</h1>
+<h3>Made by badasses</h3>
 
 </footer>
