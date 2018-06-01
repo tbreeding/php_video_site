@@ -7,10 +7,12 @@ a {
     color: inherit;
     cursor: pointer;
 }
+
 h1 {
     font-size: 3rem;
     text-shadow: 1px 1px white, 2px 2px 5px black;
 }
+
 body {
     padding: 0;
     margin: 0;
@@ -27,11 +29,13 @@ nav {
     align-items: center;
     padding: 20px;
 }
+
 .navItems {
     flex-basis: 30%;
     display: flex;
     justify-content: space-around;
 }
+
 nav a {
     font-size: 1.5rem;
     padding: 10px 30px;
@@ -40,6 +44,7 @@ nav a {
     opacity: .8;
     transition: opacity .2s;
 }
+
 nav a:hover {
     opacity: 1;
     box-shadow: 2px 2px 5px 0 gray;
@@ -52,6 +57,7 @@ nav a:hover {
     width: 100%;
     align-items: center;
 }
+
 .container h2 {
     align-self: flex-start;
     margin-left: 20px;
@@ -81,12 +87,14 @@ form {
 form h3 {
     font-size: 1.3rem;
 }
+
 .formLine {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; 
+    width: 100%;
 }
+
 form input[type='text'] {
     height: 40px;
     width: 300px;
@@ -96,6 +104,7 @@ form input[type='text'] {
     padding: 0 5px;
     font-size: 1rem;
 }
+
 form input[type='number'] {
     height: 40px;
     width: 60px;
@@ -105,16 +114,19 @@ form input[type='number'] {
     padding: 0 5px;
     font-size: 1rem;
 }
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
+
 .radios {
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
 }
+
 .radios p {
     margin: 0 10px;
 }
@@ -126,7 +138,7 @@ input[type='submit'] {
     border-radius: 10px;
     color: slategray;
     padding: 10px 30px;
-    align-self: flex-end;   
+    align-self: flex-end;
 }
 
 footer {
@@ -151,32 +163,39 @@ ul {
     border: 5px solid slategray;
     border-radius: 10px;
 }
+
 .listLine {
     display: flex;
     align-items: center;
     width: 100%;
-    padding:  0 20px;
+    padding: 0 20px;
     border-bottom: 1px solid slategray;
 }
-.listLine a{
+
+.listLine a {
 }
+
 .listLine p {
     padding: 0 10px;
 }
+
 .listId {
-    flex-basis: 10%; 
+    flex-basis: 10%;
     border-right: 1px solid slategray;
 }
+
 .listTitle, .listAuthor {
     flex-basis: 45%;
 }
+
 .listTitle {
     border-right: 1px solid slategray;
 }
+
 .details {
     width: 300px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     box-shadow: 4px 4px 10px 0 gray;
     border-radius: 20px;
     padding: 10px;
@@ -184,10 +203,18 @@ ul {
     align-self: center;
     margin-bottom: 100px;
 }
+
 .details p, .details h4 {
     margin: 15px 0px;
 }
+
 .details .row {
     display: flex;
     justify-content: space-between;
+}
+
+.itemDetail {
+    display: flex;
+    flex-direction: column;
+
 }
