@@ -1,17 +1,12 @@
 <div class="container">
-<?php foreach ($games as $game) : ?>
-    <div class="game">
-        <div class="image">
-            <img src="<?= $game['image_url'] ?>" />
-        </div>
-        <div class="info">
-            <h2 class="name"><?= $game['name'] ?></h2>
-            <div class="release"><?= $game['released_at'] ?></div>
-            <div class="description">
-                <?= $game['description'] ?>
-            </div><br>
-        <div class="rating"><?= $game['rating'] ?>%</div>  <br>      
-    </div>
-<?php endforeach; ?>
+<ul>
+    <?php foreach ($song_list as $song) : ?>
+    <li class='listLine'><a href="">
+        <p><?php echo $song->song_id; ?></p>
+        <p><?php echo $song->song_title; ?>e</p>
+        <p><?php echo $song->song_author; ?></p>
+    </a></li>   
+    <?php endforeach; ?>
+</ul>
 </div>
 </div>

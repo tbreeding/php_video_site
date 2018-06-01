@@ -26,3 +26,4 @@ class Songlist {
          return $statement->fetchAll();
     }
 }
+
