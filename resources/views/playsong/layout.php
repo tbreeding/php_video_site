@@ -15,8 +15,10 @@ $song = Song::find($_GET['song_id']);
                 <p class='listDescription'>Date added: <?php echo $song->song_date_added; ?></p>
             </div>
     </div>
-    <?php if ($song->song_id > 1) : ?>
-    <a href="<?= $site_url . '?page=playsong&song_id=' . ($song->song_id - 1); ?>">Previous song</a>
+    <?php if ($currSong_index >= 1) : ?>
+    <a href="<?= $site_url ?>?page=playsong&song_id=<?= $song_list[$currSong_index - 1]->song_id ?>">Previous song</a>
     <?php endif; ?>
-    <a href="<?= $site_url . '?page=playsong&song_id=' . ($song->song_id + 1); ?>">Next song</a>
+    <?php if ($currSong_index < count($song_list) - 1) : ?>
+    <a href="<?= $site_url ?>?page=playsong&song_id=<?= $song_list[$currSong_index + 1]->song_id ?>">Next song</a>
+    <?php endif; ?>
 </div>
