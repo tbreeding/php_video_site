@@ -4,6 +4,9 @@ use \tbreeding\mvc\routing\getControllerFromUrl as the_function_that_gets_the_co
 
 require_once '../config/app.php';   
 require_once '../vendor/tbreeding/mvc/routing.php';
+require_once '../vendor/tbreeding/mvc/db.php';
+require_once '../app/Song.php';
+require_once '../app/List.php';
 
 //BOOTSTRAPPING
 //include / require all the necessary files
